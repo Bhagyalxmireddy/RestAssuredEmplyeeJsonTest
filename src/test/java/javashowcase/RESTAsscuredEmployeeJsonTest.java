@@ -42,10 +42,18 @@ public class RESTAsscuredEmployeeJsonTest {
                 .when()
                 .post("/employees/create");
         String respAsStr = response.asString();
-       JsonObject jsonObject = new Gson().fromJson(respAsStr, JsonObject.class);
-       int id = jsonObject.get("id").getAsInt();
+       //JsonObject jsonObject = new Gson().fromJson(respAsStr, JsonObject.class);
+       //int id = jsonObject.get("id").getAsInt();
        response.then().body("id", Matchers.any(Integer.class));
        response.then().body("name", Matchers.is("Lisa"));
+      /*  RestAssured.given().contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body("{\"name\": \"xyz\",\"salary\":\"8000\"}")
+                .when()
+                .post("/employees/create")
+                .then()
+                .body("id",Matchers.any(Integer.class))
+                .body("name",Matchers.is("xyz"));*/
     }
     @Test
     public void givenEmployee_OnUpdate_ShouldReturnUpadteEmployee() {
