@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="javashowcase.RESTAsscuredEmployeeJsonTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-11-06T18:51:12" hostname="DESKTOP-25DPEJS" time="53.56">
+<testsuite name="javashowcase.RESTAsscuredEmployeeJsonTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-11-07T05:09:57" hostname="DESKTOP-25DPEJS" time="16.108">
   <properties/>
-  <testcase name="onCallingList_ReturnEmployeeList" classname="javashowcase.RESTAsscuredEmployeeJsonTest" time="53.56">
-    <failure message="java.lang.AssertionError: 1 expectation failed.&#10;JSON path id doesn't match.&#10;Expected: (a collection containing &lt;1&gt; and a collection containing &lt;2&gt;)&#10;  Actual: null&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
+  <testcase name="onCallingList_ReturnEmployeeList" classname="javashowcase.RESTAsscuredEmployeeJsonTest" time="16.108">
+    <failure message="java.lang.AssertionError: 1 expectation failed.&#10;JSON path id doesn't match.&#10;Expected: (a collection containing &lt;1&gt; and a collection containing &lt;3&gt; and a collection containing &lt;4&gt;)&#10;  Actual: [1, 2]&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
 JSON path id doesn't match.
-Expected: (a collection containing &lt;1&gt; and a collection containing &lt;2&gt;)
-  Actual: null
+Expected: (a collection containing &lt;1&gt; and a collection containing &lt;3&gt; and a collection containing &lt;4&gt;)
+  Actual: [1, 2]
 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -51,7 +51,7 @@ Expected: (a collection containing &lt;1&gt; and a collection containing &lt;2&g
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
-	at javashowcase.RESTAsscuredEmployeeJsonTest.onCallingList_ReturnEmployeeList(RESTAsscuredEmployeeJsonTest.java:20)
+	at javashowcase.RESTAsscuredEmployeeJsonTest.onCallingList_ReturnEmployeeList(RESTAsscuredEmployeeJsonTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,6 +60,7 @@ Expected: (a collection containing &lt;1&gt; and a collection containing &lt;2&g
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -101,7 +102,18 @@ Expected: (a collection containing &lt;1&gt; and a collection containing &lt;2&g
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <system-out><![CDATA[AT FIRST: {}
+  <system-out><![CDATA[AT FIRST: [
+  {
+    "id": 1,
+    "name": "Pankaj",
+    "salary": "10000"
+  },
+  {
+    "name": "David",
+    "salary": "5000",
+    "id": 2
+  }
+]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
