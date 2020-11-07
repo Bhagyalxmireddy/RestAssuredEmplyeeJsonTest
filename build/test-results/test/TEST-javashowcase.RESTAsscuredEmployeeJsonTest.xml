@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="javashowcase.RESTAsscuredEmployeeJsonTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-07T09:59:07" hostname="DESKTOP-25DPEJS" time="13.46">
+<testsuite name="javashowcase.RESTAsscuredEmployeeJsonTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-07T18:10:15" hostname="DESKTOP-25DPEJS" time="20.586">
   <properties/>
-  <testcase name="onCallingList_ReturnEmployeeList" classname="javashowcase.RESTAsscuredEmployeeJsonTest" time="13.46"/>
+  <testcase name="onCallingList_ReturnEmployeeList" classname="javashowcase.RESTAsscuredEmployeeJsonTest" time="20.586"/>
   <system-out><![CDATA[AT FIRST: [
   {
     "id": 1,
